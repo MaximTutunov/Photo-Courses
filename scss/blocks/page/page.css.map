@@ -1,0 +1,11 @@
+{
+    "version": 3,
+    "mappings": "AAGA,AAAA,KAAK,CAAC;EACJ,gBAAgB,EEHN,OAAO;EFIjB,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM;EACtB,MAAM,EAAE,IAAI;EACZ,WAAW,EAAE,MAAM;CAEpB",
+    "sources": [
+        "page.scss",
+        "../../mixins.scss",
+        "../../variables.scss"
+    ],
+    "names": [],
+    "file": "page.css"
+}

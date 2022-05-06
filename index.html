@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./pages/index.css" />
+    <title>Курс по фотографии</title>
+    <meta name="description" content="курс по фотографии" />
+    <meta name="keywords" content="курсы, фотография" />
+    <meta name="author" content="Тютюнов Максим" />
+  </head>
+
+  <body class="page root">
+    <header class="header">
+      <button class="header__logo"></button>
+
+      <ul class="header__menu">
+        <li class="header__menu-item">
+          <a href="#comp" class="header__menu-ref"> Композиция</a>
+        </li>
+        <li class="header__menu-item">
+          <a href="#cam" class="header__menu-ref"> Камера</a>
+        </li>
+        <li class="header__menu-item">
+          <a href="#order" class="header__menu-ref"> Поиск заказов</a>
+        </li>
+      </ul>
+
+      <button class="header__hamburger-button">
+        <img class="header__menuIcon" src="./images/burger-icon.png" alt="" />
+        <img
+          class="header__closeIcon header__closeIcon-hidden"
+          src="./images/close-icon.png"
+          alt=""
+        />
+      </button>
+    </header>
+
+    <main class="main">
+      <section class="introduction">
+        <h1 class="introduction__title">Курс&nbsp;по фотографии</h1>
+
+        <div class="introduction__picture-block"></div>
+        <p class="introduction__description">
+          Фотография в природных условиях, уроки по композиции и по пользованию
+          камерой.
+        </p>
+        <button type="button" class="introduction__detail">Подробнее</button>
+      </section>
+
+      <section class="composition" id="comp">
+        <div class="composition__wrapper">
+          <div class="composition__nav-element">композиция</div>
+          <h2 class="composition__title">Изучите композицию</h2>
+          <div class="composition__picture-block"></div>
+          <div class="composition__description">
+            <p class="composition__paragraph">
+              Вы изучите гармоничное размещение всех элементов изображения на
+              снимке.
+            </p>
+            <p class="composition__paragraph">
+              Изучите композицию интуитивную и какие-то определённые законы.
+            </p>
+          </div>
+
+          <button type="button" class="composition__detail">Записаться!</button>
+
+          <div class="composition__rules-block">
+            <p class="composition__rules">
+              Правило третей, при котором нужно располагать объекты на
+              пересечениях.
+            </p>
+            <p class="composition__rules">
+              Простота: убирай всё лишнее и кадрируй!
+            </p>
+            <p class="composition__rules">
+              Равновесие: уравновесь пятна объекта и фона.
+            </p>
+            <p class="composition__rules">
+              3D глубина кадра: расположи объект позади и перед другими
+              предметами.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="camera" id="cam">
+        <div class="camera__wrapper">
+          <div class="camera__nav-element">камера</div>
+          <h2 class="camera__title">Настройка Съемка Обработка</h2>
+          <div class="camera__picture-block"></div>
+          <p class="camera__review">отзывы про часть о камерах:</p>
+
+          <div class="camera__review-block">
+            <div class="camera__review-element">
+              <p class="camera__paragraph">
+                на&NonBreakingSpace;этом&NonBreakingSpace;курсе&NonBreakingSpace;я&NonBreakingSpace;научился
+                пользоватся камерой, как настоящий профессионал!
+              </p>
+              <p class="camera__review-author">Питер, водитель</p>
+              <p class="camera__review-email">@piter123</p>
+            </div>
+            <div class="camera__review-element">
+              <p class="camera__paragraph">
+                супер крутой курс! на части про фотики я стал разбираться в
+                предназначении&NonBreakingSpace;кнопок
+              </p>
+              <p class="camera__review-author">Джон, спортсмен</p>
+              <p class="camera__review-email">@piter123</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="order" id="order">
+        <div class="order__nav-element">поиск заказов</div>
+        <h2 class="order__title">Научим находить заказы</h2>
+        <div class="order__picture-block"></div>
+        <p class="order__description">
+          Мы научим вас искать заказы на всяких фриланс биржах, а когда вы
+          сделаете крутое портфолио, мы поможем найти постоянную работу.
+        </p>
+        <button type="button" class="order__detail">Записаться!</button>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__wrapper">
+      <div class="footer__icon"></div>
+      <h2 class="footer__title">Записаться! Сейчас!</h2>
+
+      <form class="footer__emailform">
+        <input
+          class="footer__input"
+          type="email"
+          name="email"
+          id="emailinput"
+          placeholder="Ваша почта"
+          required
+        />
+        <button class="footer__button" type="submit">Записаться!</button>
+      </form>
+
+      <p class="footer__sitename">© Максим Тютюнов 2022</p>
+    </div>
+    </footer>
+
+    <script src="./scripts/script.js"></script>
+  </body>
+</html>

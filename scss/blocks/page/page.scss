@@ -1,0 +1,11 @@
+@import './../../mixins.scss';
+@import './../../variables.scss';
+
+.page {
+  background-color: $clr-white;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  align-items: center;
+  
+}

@@ -1,0 +1,263 @@
+@import "./../../mixins.scss";
+@import "./../../variables.scss";
+
+.camera {
+  background-color: $clr-black;
+  padding-top: 50px;
+  width: 98vw;
+
+  @media (max-width: 1440px) {
+    max-width: 768px;
+  }
+
+  @media (max-width: 768px) {
+    max-width: 768px;
+    min-height: 300px;
+  }
+
+  &__wrapper {
+    width: 1340px;
+    position: relative;
+    min-height: 1357px;
+    margin: auto;
+    display: block;
+
+    @media (max-width: 1440px) {
+      display: flex;
+      flex-direction: column;
+      max-width: 688px;
+      min-height: 2159px;
+    }
+    @media (max-width: 768px) {
+      max-width: 280px;
+      min-height: 300px;
+    }
+  }
+
+  &__nav-element {
+    font-family: Roboto;
+    color: $clr-white;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+    max-width: 280px;
+
+    @media (max-width: 768px) {
+      font-family: Roboto;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px;
+      letter-spacing: 0em;
+      width: 280px;
+      border-top: 1px solid $clr-white;
+      padding-top: 20px;
+    }
+  }
+
+  &__title {
+    max-width: 618px;
+    margin-top: 50px;
+    color: $clr-white;
+    font-family: Roboto;
+    font-size: 122px;
+    font-weight: 400;
+    line-height: 122px;
+    letter-spacing: 0em;
+    text-align: left;
+
+    @media (max-width: 1440px) {
+      max-width: 624px;
+      margin-top: 40px;
+      margin-bottom: 0px;
+    }
+
+    @media (max-width: 768px) {
+      font-family: Roboto;
+      font-size: 48px;
+      font-weight: 400;
+      line-height: 56px;
+      letter-spacing: 0em;
+      text-align: left;
+    }
+  }
+
+  &__review {
+    position: absolute;
+    top: 784px;
+    font-family: Roboto;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: $clr-white;
+
+    @media (max-width: 1440px) {
+      position: static;
+      margin: 0;
+      padding: 0;
+      margin-top: 60px;
+    }
+    @media (max-width: 768px) {
+      position: static;
+      margin-top: 60px;
+      font-family: Roboto;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px;
+      letter-spacing: 0em;
+      text-align: left;
+    }
+  }
+
+  &__picture-block {
+    position: absolute;
+    background-image: url(./../images/camera.png);
+    width: 642px;
+    height: 832px;
+    top: 0px;
+    right: 0px;
+
+    @media (max-width: 1440px) {
+      position: static;
+      margin-top: 60px;
+      width: 688px;
+      height: 656px;
+      background-size: contain;
+    }
+
+    @media (max-width: 768px) {
+      margin-top: 60px;
+      width: 280px;
+      height: 268px;
+      background-size: contain;
+    }
+  }
+
+  &__review-block {
+    position: absolute;
+    top: 1012px;
+    display: flex;
+    margin: 0;
+    padding: 0;
+
+    @media (max-width: 1440px) {
+      position: static;
+      flex-direction: column;
+      margin: 0;
+      margin-top: 180px;
+      padding: 0;
+    }
+
+    @media (max-width: 768px) {
+      position: static;
+      flex-direction: column;
+      margin: 0;
+      margin-top: 60px;
+      padding: 0;
+    }
+  }
+
+  &__review-element {
+    color: $clr-white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: 1440px) {
+      padding-bottom: 60px;
+      border-bottom: 1px solid $clr-white;
+      &:last-of-type {
+        border-bottom: none;
+        padding-bottom: 0;
+        padding-top: 60px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      padding-bottom: 20px;
+      border-bottom: 1px solid $clr-white;
+      &:last-of-type {
+        border-bottom: none;
+        padding-bottom: 0;
+        padding-top: 30px;
+      }
+    }
+  }
+
+  &__paragraph {
+    max-width: 560px;
+    max-height: 173px;
+    margin: 0;
+    margin-right: 172px;
+    padding: 0;
+    color: $clr-white;
+    font-family: Roboto;
+    font-size: 43px;
+    font-weight: 400;
+    line-height: 43px;
+    letter-spacing: 0em;
+    text-align: left;
+
+    @media (max-width: 768px) {
+      font-family: Roboto;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 26px;
+      letter-spacing: 0em;
+      text-align: left;
+      margin: 0;
+      padding: 0;
+    }
+  }
+  &paragraph:last-child {
+    margin-right: 0px;
+    border-bottom: none;
+  }
+
+  &__review-author {
+    color: $clr-white;
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-top: 60px;
+    @media (max-width: 768px) {
+      font-family: Roboto;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px;
+      letter-spacing: 0em;
+      text-align: left;
+      margin-top: 30px;
+    }
+  }
+
+  &__review-email {
+    margin-top: 10px;
+    color: $clr-white;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0em;
+    text-align: left;
+
+    @media (max-width: 768px) {
+      font-family: Roboto;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 12px;
+      letter-spacing: 0em;
+      text-align: left;
+    }
+  }
+}
