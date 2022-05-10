@@ -1,18 +1,19 @@
 .composition {
   background-color: #ffce00;
-  width: 98vw;
+  width: 1440px;
+  margin: auto;
   padding-top: 50px;
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 1439px) {
   .composition {
-    max-width: 768px;
+    width: 768px;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .composition {
-    max-width: 768px;
+    width: 320px;
     min-height: auto;
     padding: 0;
   }
@@ -26,7 +27,7 @@
   display: block;
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 1439px) {
   .composition__wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -40,7 +41,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .composition__wrapper {
     max-width: 280px;
     min-height: 1090px;
@@ -58,7 +59,7 @@
   max-width: 280px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .composition__nav-element {
     border-top: 1px solid black;
     width: 280px;
@@ -85,14 +86,14 @@
   text-align: left;
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 14390px) {
   .composition__title {
     max-width: 624px;
     margin-top: 40px;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .composition__title {
     padding: 0;
     margin: 0;
@@ -120,7 +121,7 @@
   text-align: left;
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 1439px) {
   .composition__description {
     position: relative;
     margin: 0;
@@ -129,7 +130,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .composition__description {
     position: relative;
     margin: 0;
@@ -149,7 +150,7 @@
   padding: 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .composition__paragraph {
     margin-bottom: 36px;
     margin-top: 0px;
@@ -171,7 +172,7 @@
   cursor: pointer;
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 1439px) {
   .composition__detail {
     position: static;
     background-image: url(./../images/detail.png);
@@ -184,7 +185,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .composition__detail {
     background-image: url(./../images/detailS.png);
     width: 169px;
@@ -205,7 +206,7 @@
   right: 0px;
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 1439px) {
   .composition__picture-block {
     position: static;
     margin-top: 10px;
@@ -215,7 +216,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .composition__picture-block {
     margin-top: 60px;
     width: 280px;
@@ -237,7 +238,7 @@
   padding: 0;
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 1439px) {
   .composition__rules-block {
     position: static;
     display: -webkit-box;
@@ -252,7 +253,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .composition__rules-block {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -275,7 +276,7 @@
   text-align: left;
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 1439px) {
   .composition__rules {
     margin: 0;
     max-width: 688px;
@@ -287,7 +288,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .composition__rules {
     max-width: 270px;
     font-family: Roboto;
@@ -308,5 +309,6 @@
 .composition__rules:last-of-type {
   margin-right: 0px;
   border-bottom: none;
+  padding-bottom: 18px;
 }
 /*# sourceMappingURL=composition.css.map */

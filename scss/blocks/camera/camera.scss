@@ -4,15 +4,17 @@
 .camera {
   background-color: $clr-black;
   padding-top: 50px;
-  width: 98vw;
+  max-width: 1440px;
+  margin: auto;
 
-  @media (max-width: 1440px) {
+  @media (max-width: 1439px) {
     max-width: 768px;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     max-width: 768px;
     min-height: 300px;
+    padding-top: 0px;
   }
 
   &__wrapper {
@@ -22,13 +24,13 @@
     margin: auto;
     display: block;
 
-    @media (max-width: 1440px) {
+    @media (max-width: 1439px) {
       display: flex;
       flex-direction: column;
       max-width: 688px;
       min-height: 2159px;
     }
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
       max-width: 280px;
       min-height: 300px;
     }
@@ -47,7 +49,8 @@
     margin: 0;
     max-width: 280px;
 
-    @media (max-width: 768px) {
+
+    @media (max-width: 767px) {
       font-family: Roboto;
       font-size: 14px;
       font-weight: 400;
@@ -56,6 +59,7 @@
       width: 280px;
       border-top: 1px solid $clr-white;
       padding-top: 20px;
+      margin-top: 40px;
     }
   }
 
@@ -70,19 +74,20 @@
     letter-spacing: 0em;
     text-align: left;
 
-    @media (max-width: 1440px) {
+    @media (max-width: 1439px) {
       max-width: 624px;
       margin-top: 40px;
       margin-bottom: 0px;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
       font-family: Roboto;
       font-size: 48px;
       font-weight: 400;
       line-height: 56px;
       letter-spacing: 0em;
       text-align: left;
+      margin-top: 30px;
     }
   }
 
@@ -98,13 +103,13 @@
     text-align: left;
     color: $clr-white;
 
-    @media (max-width: 1440px) {
+    @media (max-width: 1439px) {
       position: static;
       margin: 0;
       padding: 0;
       margin-top: 60px;
     }
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
       position: static;
       margin-top: 60px;
       font-family: Roboto;
@@ -124,7 +129,7 @@
     top: 0px;
     right: 0px;
 
-    @media (max-width: 1440px) {
+    @media (max-width: 1439px) {
       position: static;
       margin-top: 60px;
       width: 688px;
@@ -132,7 +137,7 @@
       background-size: contain;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
       margin-top: 60px;
       width: 280px;
       height: 268px;
@@ -147,7 +152,7 @@
     margin: 0;
     padding: 0;
 
-    @media (max-width: 1440px) {
+    @media (max-width: 1439px) {
       position: static;
       flex-direction: column;
       margin: 0;
@@ -155,7 +160,7 @@
       padding: 0;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
       position: static;
       flex-direction: column;
       margin: 0;
@@ -169,18 +174,23 @@
     position: relative;
     display: flex;
     flex-direction: column;
+    &:last-of-type {
+      padding-left: 0px;
+      margin-left: 13px;
+    }
 
-    @media (max-width: 1440px) {
+    @media (max-width: 1439px) {
       padding-bottom: 60px;
       border-bottom: 1px solid $clr-white;
       &:last-of-type {
         border-bottom: none;
         padding-bottom: 0;
         padding-top: 60px;
+        margin: 0;
       }
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
       padding-bottom: 20px;
       border-bottom: 1px solid $clr-white;
       &:last-of-type {
@@ -205,7 +215,7 @@
     letter-spacing: 0em;
     text-align: left;
 
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
       font-family: Roboto;
       font-size: 24px;
       font-weight: 400;
@@ -224,14 +234,14 @@
   &__review-author {
     color: $clr-white;
     font-family: Roboto;
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 400;
     margin: 0;
     padding: 0;
     letter-spacing: 0em;
     text-align: left;
     margin-top: 60px;
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
       font-family: Roboto;
       font-size: 14px;
       font-weight: 400;
@@ -243,21 +253,22 @@
   }
 
   &__review-email {
-    margin-top: 10px;
+    margin-top: 20px;
     color: $clr-white;
     font-family: Roboto;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 400;
     letter-spacing: 0em;
     text-align: left;
 
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
       font-family: Roboto;
       font-size: 12px;
       font-weight: 400;
       line-height: 12px;
       letter-spacing: 0em;
       text-align: left;
+      margin-top: 6px;
     }
   }
 }

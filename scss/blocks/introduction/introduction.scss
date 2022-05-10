@@ -8,17 +8,20 @@
   grid-template-rows: 220px 285px 50px;
   grid-column-gap: 70px;
   max-width: 1340px;
+  margin: auto;
   padding: 0;
   padding-top: 134px;
   padding-bottom: 50px;
+  
 
-  @media (max-width: 1440px) {
+  @media (max-width: 1439px) {
     display: flex;
     flex-direction: column;
-    max-width: calc(100vw-80px);
+    max-width: 688px;
+    padding-top: 114px;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     padding: 0;
     padding-top: 84px;
     display: flex;
@@ -39,12 +42,12 @@
     text-align: left;
     max-width: 624px;
 
-    @media (max-width: 1440px) {
+    @media (max-width: 1439px) {
       position: static;
       max-width: 624px;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
       font-family: Roboto;
       font-size: 47px;
       font-weight: 400;
@@ -68,7 +71,7 @@
     padding-left: 5px;
     margin-top: 65px;
 
-    @media (max-width: 1440px) {
+    @media (max-width: 1439px) {
       position: relative;
       position: static;
       margin: 0;
@@ -76,7 +79,7 @@
       padding: 0;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
       position: relative;
       position: static;
       margin: 0;
@@ -101,14 +104,14 @@
     background-color: $clr-white;
     cursor: pointer;
 
-    @media (max-width: 1440px) {
+    @media (max-width: 1439px) {
       position: relative;
       position: static;
       margin: 0;
       margin-top: 60px;
       padding: 0;
     }
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
       background-image: url(./../images/detailS.png);
       width: 169px;
       height: 40px;
@@ -132,7 +135,7 @@
     background-image: url(./../images/introduction.png);
     background-size: 100%;
 
-    @media (max-width: 1440px) {
+    @media (max-width: 1439px) {
       margin: auto;
       position: static;
       margin-top: 60px;
@@ -141,7 +144,7 @@
       background-size: contain;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
       position: static;
       margin-top: 60px;
       width: 280px;

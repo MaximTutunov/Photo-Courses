@@ -1,15 +1,25 @@
 @import "./../../mixins.scss";
 @import "./../../variables.scss";
 .header {
-  position:fixed;
+  position: fixed;
   top: 0;
   box-sizing: border-box;
-  width: 99vw;
-   display: flex;
+  width: 1440px;
+  min-width: 320px;
+  display: flex;
   justify-content: space-between;
   background: $clr-red;
   z-index: 99;
-  
+
+  @media (max-width: 1439px) {
+    width: 768px;
+    margin: auto;
+  }
+  @media (max-width: 767px) {
+    min-width: 320px;
+    width: 99vw;
+    justify-items: center;
+  }
 
   &__logo {
     background: url(./../images/ArrowRD.png);
@@ -24,27 +34,27 @@
     z-index: 2;
     cursor: pointer;
     transition: transform ease 350ms;
-    display:block;
+    display: block;
   }
 
-  @media (max-width: 1440px) {
+  @media (max-width: 1439px) {
     &__logo {
       background-size: contain;
       width: 30px;
       height: 30px;
       margin-left: 41px;
-      display:block;
+      display: block;
     }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     &__logo {
       background-size: contain;
       height: 26.55px;
       width: 25.7px;
       border-radius: 0px;
       margin-left: 21px;
-display:block;
+      display: block;
     }
   }
 
@@ -52,36 +62,57 @@ display:block;
     transform: rotate(180deg);
   }
 
-&__logo-hidden{
-  display: none;
-}
+  &__logo-hidden {
+    display: none;
+  }
 
+  &__nav {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    
+  }
+  @media (max-width: 767px) {
+    &__nav {
+      
+      
+          
+      align-items: center;
+      
+      margin: auto;
+      margin-top: 76px;
+      padding-right:50px;
+      
+      padding-bottom: 26px;
+    }
+  }
 
   &__menu {
+    margin: 0;
+    padding: 0;
     display: flex;
     margin-right: 50px;
     list-style: none;
   }
 
-  @media (max-width: 1440px) {
+  @media (max-width: 1439px) {
     &__menu {
       display: none;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    &__menu {
-      display: none;
-      margin: auto;
-     padding: 0;
-     
     }
   }
 
+  @media (max-width: 767px) {
+    &__menu {
+      display: none;
+      margin: 0;
+      padding: 0;
+            
+    }
+  }
 
   &__menu-item {
     display: flex;
-        padding-right: 40px;
+    padding-right: 40px;
     margin: auto;
   }
 
@@ -89,7 +120,7 @@ display:block;
     padding-right: 0px;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     &__menu-item {
       display: flex;
       flex-direction: column;
@@ -113,42 +144,44 @@ display:block;
     font-weight: bold;
   }
 
-  &__menu-active{
-    display:flex;
+  &__menu-active {
+    display: flex;
+    padding-left: 40px;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     &__menu-active {
       display: flex;
       flex-direction: column;
       margin: auto;
       justify-content: center;
-      margin-top:76px;
+      padding: 0;
+      /*margin-top: 76px;*/
     }
   }
-  
-
 
   &__hamburger-button {
     display: none;
-        background: $clr-red;
+    background: $clr-red;
     cursor: pointer;
   }
 
-  @media (max-width: 1440px) {
+  @media (max-width: 1439px) {
     &__hamburger-button {
       display: block;
       padding-right: 24px;
       border: none;
     }
   }
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     &__hamburger-button {
-      padding-right: 24px;
-      border: none;
+      position: absolute;
+      top: 24px;
+      right: 20px;
+      padding: 0;
     }
   }
-  &__hamburger-button-hidden{
+  &__hamburger-button-hidden {
     display: none;
   }
 
@@ -158,44 +191,31 @@ display:block;
     height: 20px;
   }
 
-  @media (max-width: 1440px) {
+  @media (max-width: 1439px) {
     &__menuIcon {
       display: block;
-  
     }
   }
 
-  &__menuIcon-hidden{
-    display:none;
-    
+  &__menuIcon-hidden {
+    display: none;
   }
 
   &__closeIcon {
-    width: 27px;
-    height: 27px;
-    
+    width: 39px;
+    height: 39px;
   }
 
-
-&__closeIcon-hidden{
-  display:none;
-}
-
-@media (max-width: 768px) {
-  &__closeIcon {
-     
-    position:fixed;
-    top: 16.4px;
-    right: 14.4px;
+  &__closeIcon-hidden {
+    display: none;
   }
-}
-@media (max-width: 1440px) {
-  &__closeIcon {
-       
-    position:fixed;
-    top: 16.4px;
-    right: 14.4px;
-  }
-}
 
+  @media (max-width: 1439px) {
+    &__closeIcon {
+    }
+    @media (max-width: 767px) {
+      &__closeIcon {
+      }
+    }
+  }
 }

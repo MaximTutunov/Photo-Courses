@@ -3,15 +3,16 @@
 
 .composition {
   background-color: $clr-yellow;
-  width: 98vw;
+  width: 1440px;
+  margin: auto;
   padding-top: 50px;
 
-  @media (max-width: 1440px) {
-    max-width: 768px;
+  @media (max-width: 1439px) {
+    width: 768px;
   }
 
-  @media (max-width: 768px) {
-    max-width: 768px;
+  @media (max-width: 767px) {
+    width: 320px;
     min-height: auto;
     padding: 0;
   }
@@ -23,13 +24,13 @@
     margin: auto;
     display: block;
 
-    @media (max-width: 1440px) {
+    @media (max-width: 1439px) {
       display: flex;
       flex-direction: column;
       max-width: 688px;
       min-height: 1644px;
     }
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
       max-width: 280px;
       min-height: 1090px;
     }
@@ -46,7 +47,7 @@
 
     max-width: 280px;
 
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
       border-top: 1px solid black;
       width: 280px;
       margin: 0;
@@ -72,12 +73,12 @@
     letter-spacing: 0em;
     text-align: left;
 
-    @media (max-width: 1440px) {
+    @media (max-width: 14390px) {
       max-width: 624px;
       margin-top: 40px;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
       padding: 0;
       margin: 0;
       margin-top: 30px;
@@ -104,14 +105,14 @@
     letter-spacing: 0em;
     text-align: left;
 
-    @media (max-width: 1440px) {
+    @media (max-width: 1439px) {
       position: relative;
       margin: 0;
       margin-top: 60px;
       padding: 0;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
       position: relative;
       margin: 0;
       margin-top: 60px;
@@ -128,7 +129,7 @@
   &__paragraph {
     margin: 0;
     padding: 0;
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
       margin-bottom: 36px;
       margin-top: 0px;
     }
@@ -148,7 +149,7 @@
     background-color: transparent;
     cursor: pointer;
 
-    @media (max-width: 1440px) {
+    @media (max-width: 1439px) {
       position: static;
       background-image: url(./../images/detail.png);
       width: 228px;
@@ -158,7 +159,7 @@
       cursor: pointer;
       margin-top: 60px;
     }
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
       background-image: url(./../images/detailS.png);
       width: 169px;
       height: 40px;
@@ -177,7 +178,7 @@
     top: 0px;
     right: 0px;
 
-    @media (max-width: 1440px) {
+    @media (max-width: 1439px) {
       position: static;
       margin-top: 10px;
       width: 688px;
@@ -185,7 +186,7 @@
       background-size: contain;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
       margin-top: 60px;
       width: 280px;
       height: 278px;
@@ -202,7 +203,7 @@
 
     padding: 0;
 
-    @media (max-width: 1440px) {
+    @media (max-width: 1439px) {
       position: static;
       display: flex;
       flex-direction: column;
@@ -210,7 +211,7 @@
       padding: 0;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
       flex-direction: column;
       position: static;
       margin-top: 64px;
@@ -229,7 +230,7 @@
     letter-spacing: 0em;
     text-align: left;
 
-    @media (max-width: 1440px) {
+    @media (max-width: 1439px) {
       margin: 0;
       max-width: 688px;
       padding: 0;
@@ -238,7 +239,7 @@
       padding-top: 30px;
       padding-bottom: 30px;
     }
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
       max-width: 270px;
       font-family: Roboto;
       font-size: 14px;
@@ -259,5 +260,6 @@
   &__rules:last-of-type {
     margin-right: 0px;
     border-bottom: none;
+    padding-bottom: 18px;
   }
 }

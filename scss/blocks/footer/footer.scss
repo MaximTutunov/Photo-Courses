@@ -3,16 +3,17 @@
 
 .footer {
   background-color: $clr-red;
-   width: 98vw;
+  width: 1440px;
+  margin: auto;
   
   
 
-  @media (max-width: 1440px) {
+  @media (max-width: 1439px) {
     flex-direction: column;
     max-width: 768px;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     flex-direction: column;
     max-width: 320px;
   }
@@ -26,14 +27,15 @@
   padding-top: 50px;
     min-height: 570px;
     margin: auto;
-    @media (max-width: 1440px){
+    @media (max-width: 1439px){
       flex-direction: column;
     max-width: 688px;
     min-height: 584px;
     }
-    @media (max-width: 768px){
+    @media (max-width: 767px){
       padding-top: 0px;
       max-width: 280px;
+      min-height: 454px;
       
     }  
       }
@@ -43,11 +45,11 @@
     height: 95px;
         background-image: url(./../images/footer-arrow.png);
 
-    @media (max-width: 1440px) {
+    @media (max-width: 1439px) {
       display: none;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
       display: none;
     }
   }
@@ -68,7 +70,7 @@
 
   
 
-    @media (max-width: 1440px) {
+    @media (max-width: 1439px) {
       position: static;
       font-family: Roboto;
       font-size: 100px;
@@ -80,7 +82,7 @@
       padding: 0;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
       position: static;
       font-family: Roboto;
       font-size: 48px;
@@ -103,11 +105,11 @@
     margin: 0;
     padding: 0;
 
-    @media (max-width: 1440px) {
+    @media (max-width: 1439px) {
       position: static;
       margin-top: 190px;
     }
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
       position: static;
       display: flex;
       margin: 0;
@@ -132,7 +134,7 @@
 
     border-radius: 8px 0 0 8px;
 
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
       position: static;
  
       width: 175px;
@@ -165,7 +167,7 @@
     border-radius: 0 8px 8px 0;
 
     cursor: pointer;
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
       position: static;
      
       width: 107px;
@@ -191,17 +193,17 @@
     letter-spacing: 0em;
     text-align: left;
 
-    @media (max-width: 1440px) {
+    @media (max-width: 1439px) {
       position: static;
       margin: 0;
       margin-top: 80px;
       padding:0;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
       position: static;
       margin: 0;
-      margin-top: 53px;
+      margin-top: 40px;
       padding: 0;
       font-family: Roboto;
       font-size: 12px;

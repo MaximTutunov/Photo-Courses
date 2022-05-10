@@ -1,9 +1,10 @@
 .footer {
   background-color: #df2626;
-  width: 98vw;
+  width: 1440px;
+  margin: auto;
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 1439px) {
   .footer {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -13,7 +14,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .footer {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -38,7 +39,7 @@
   margin: auto;
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 1439px) {
   .footer__wrapper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -49,10 +50,11 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .footer__wrapper {
     padding-top: 0px;
     max-width: 280px;
+    min-height: 454px;
   }
 }
 
@@ -62,13 +64,13 @@
   background-image: url(./../images/footer-arrow.png);
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 1439px) {
   .footer__icon {
     display: none;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .footer__icon {
     display: none;
   }
@@ -89,7 +91,7 @@
   max-width: 685px;
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 1439px) {
   .footer__title {
     position: static;
     font-family: Roboto;
@@ -103,7 +105,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .footer__title {
     position: static;
     font-family: Roboto;
@@ -128,14 +130,14 @@
   padding: 0;
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 1439px) {
   .footer__emailform {
     position: static;
     margin-top: 190px;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .footer__emailform {
     position: static;
     display: -webkit-box;
@@ -163,7 +165,7 @@
   border-radius: 8px 0 0 8px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .footer__input {
     position: static;
     width: 175px;
@@ -196,7 +198,7 @@
   cursor: pointer;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .footer__button {
     position: static;
     width: 107px;
@@ -223,7 +225,7 @@
   text-align: left;
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 1439px) {
   .footer__sitename {
     position: static;
     margin: 0;
@@ -232,11 +234,11 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .footer__sitename {
     position: static;
     margin: 0;
-    margin-top: 53px;
+    margin-top: 40px;
     padding: 0;
     font-family: Roboto;
     font-size: 12px;

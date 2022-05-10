@@ -1,19 +1,21 @@
 .camera {
   background-color: #000000;
   padding-top: 50px;
-  width: 98vw;
+  max-width: 1440px;
+  margin: auto;
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 1439px) {
   .camera {
     max-width: 768px;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .camera {
     max-width: 768px;
     min-height: 300px;
+    padding-top: 0px;
   }
 }
 
@@ -25,7 +27,7 @@
   display: block;
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 1439px) {
   .camera__wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -39,7 +41,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .camera__wrapper {
     max-width: 280px;
     min-height: 300px;
@@ -60,7 +62,7 @@
   max-width: 280px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .camera__nav-element {
     font-family: Roboto;
     font-size: 14px;
@@ -70,6 +72,7 @@
     width: 280px;
     border-top: 1px solid #FFFFFF;
     padding-top: 20px;
+    margin-top: 40px;
   }
 }
 
@@ -85,7 +88,7 @@
   text-align: left;
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 1439px) {
   .camera__title {
     max-width: 624px;
     margin-top: 40px;
@@ -93,7 +96,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .camera__title {
     font-family: Roboto;
     font-size: 48px;
@@ -101,6 +104,7 @@
     line-height: 56px;
     letter-spacing: 0em;
     text-align: left;
+    margin-top: 30px;
   }
 }
 
@@ -117,7 +121,7 @@
   color: #FFFFFF;
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 1439px) {
   .camera__review {
     position: static;
     margin: 0;
@@ -126,7 +130,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .camera__review {
     position: static;
     margin-top: 60px;
@@ -148,7 +152,7 @@
   right: 0px;
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 1439px) {
   .camera__picture-block {
     position: static;
     margin-top: 60px;
@@ -158,7 +162,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .camera__picture-block {
     margin-top: 60px;
     width: 280px;
@@ -177,7 +181,7 @@
   padding: 0;
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 1439px) {
   .camera__review-block {
     position: static;
     -webkit-box-orient: vertical;
@@ -190,7 +194,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .camera__review-block {
     position: static;
     -webkit-box-orient: vertical;
@@ -215,7 +219,12 @@
           flex-direction: column;
 }
 
-@media (max-width: 1440px) {
+.camera__review-element:last-of-type {
+  padding-left: 0px;
+  margin-left: 13px;
+}
+
+@media (max-width: 1439px) {
   .camera__review-element {
     padding-bottom: 60px;
     border-bottom: 1px solid #FFFFFF;
@@ -224,10 +233,11 @@
     border-bottom: none;
     padding-bottom: 0;
     padding-top: 60px;
+    margin: 0;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .camera__review-element {
     padding-bottom: 20px;
     border-bottom: 1px solid #FFFFFF;
@@ -254,7 +264,7 @@
   text-align: left;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .camera__paragraph {
     font-family: Roboto;
     font-size: 24px;
@@ -275,7 +285,7 @@
 .camera__review-author {
   color: #FFFFFF;
   font-family: Roboto;
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 400;
   margin: 0;
   padding: 0;
@@ -284,7 +294,7 @@
   margin-top: 60px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .camera__review-author {
     font-family: Roboto;
     font-size: 14px;
@@ -297,16 +307,16 @@
 }
 
 .camera__review-email {
-  margin-top: 10px;
+  margin-top: 20px;
   color: #FFFFFF;
   font-family: Roboto;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 400;
   letter-spacing: 0em;
   text-align: left;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .camera__review-email {
     font-family: Roboto;
     font-size: 12px;
@@ -314,6 +324,7 @@
     line-height: 12px;
     letter-spacing: 0em;
     text-align: left;
+    margin-top: 6px;
   }
 }
 /*# sourceMappingURL=camera.css.map */

@@ -14,21 +14,22 @@
 
   <body class="page root">
     <header class="header">
-      <button class="header__logo"></button>
+      <button class="header__logo" type="button"></button>
+      <nav class="header__nav">
+        <ul class="header__menu">
+          <li class="header__menu-item">
+            <a href="#comp" class="header__menu-ref"> Композиция</a>
+          </li>
+          <li class="header__menu-item">
+            <a href="#cam" class="header__menu-ref"> Камера</a>
+          </li>
+          <li class="header__menu-item">
+            <a href="#order" class="header__menu-ref"> Поиск заказов</a>
+          </li>
+        </ul>
+      </nav>
 
-      <ul class="header__menu">
-        <li class="header__menu-item">
-          <a href="#comp" class="header__menu-ref"> Композиция</a>
-        </li>
-        <li class="header__menu-item">
-          <a href="#cam" class="header__menu-ref"> Камера</a>
-        </li>
-        <li class="header__menu-item">
-          <a href="#order" class="header__menu-ref"> Поиск заказов</a>
-        </li>
-      </ul>
-
-      <button class="header__hamburger-button">
+      <button class="header__hamburger-button" type="button">
         <img class="header__menuIcon" src="./images/burger-icon.png" alt="" />
         <img
           class="header__closeIcon header__closeIcon-hidden"
@@ -108,7 +109,7 @@
                 предназначении&NonBreakingSpace;кнопок
               </p>
               <p class="camera__review-author">Джон, спортсмен</p>
-              <p class="camera__review-email">@piter123</p>
+              <p class="camera__review-email">@john_sport</p>
             </div>
           </div>
         </div>
@@ -116,7 +117,7 @@
 
       <section class="order" id="order">
         <div class="order__nav-element">поиск заказов</div>
-        <h2 class="order__title">Научим находить заказы</h2>
+        <h2 class="order__title">Научим находить заказы!</h2>
         <div class="order__picture-block"></div>
         <p class="order__description">
           Мы научим вас искать заказы на всяких фриланс биржах, а когда вы
@@ -128,23 +129,23 @@
 
     <footer class="footer">
       <div class="footer__wrapper">
-      <div class="footer__icon"></div>
-      <h2 class="footer__title">Записаться! Сейчас!</h2>
+        <div class="footer__icon"></div>
+        <h2 class="footer__title">Записаться! Сейчас!</h2>
 
-      <form class="footer__emailform">
-        <input
-          class="footer__input"
-          type="email"
-          name="email"
-          id="emailinput"
-          placeholder="Ваша почта"
-          required
-        />
-        <button class="footer__button" type="submit">Записаться!</button>
-      </form>
+        <form class="footer__emailform">
+          <input
+            class="footer__input"
+            type="email"
+            name="email"
+            id="emailinput"
+            placeholder="Ваша почта"
+            required
+          />
+          <button class="footer__button" type="submit">Записаться!</button>
+        </form>
 
-      <p class="footer__sitename">© Максим Тютюнов 2022</p>
-    </div>
+        <p class="footer__sitename">© Максим Тютюнов 2022</p>
+      </div>
     </footer>
 
     <script src="./scripts/script.js"></script>
