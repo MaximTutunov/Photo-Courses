@@ -4,6 +4,7 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 1440px;
+  min-height: 84px;
   min-width: 320px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -13,6 +14,14 @@
           justify-content: space-between;
   background: #df2626;
   z-index: 99;
+  /* @media (max-width: 1439px) {
+    &__closeIcon {
+    }
+    @media (max-width: 767px) {
+      &__closeIcon {
+      }
+    }
+  }*/
 }
 
 @media (max-width: 1439px) {
@@ -24,20 +33,20 @@
 
 @media (max-width: 767px) {
   .header {
-    min-width: 320px;
-    width: 99vw;
+    width: 320px;
     justify-items: center;
+    min-height: 70px;
   }
 }
 
 .header__logo {
-  background: url(./../images/ArrowRD.png);
+  background: url(./../images/ArrowRD.svg);
   border: none;
   width: 40px;
   height: 40px;
   background-color: #df2626;
   padding: 0;
-  margin-left: 60px;
+  margin-left: 52px;
   margin-top: 22px;
   margin-bottom: 22px;
   z-index: 2;
@@ -52,27 +61,24 @@
 @media (max-width: 1439px) {
   .header__logo {
     background-size: contain;
-    width: 30px;
-    height: 30px;
+    width: 36px;
+    height: 36px;
     margin-left: 41px;
-    display: block;
   }
 }
 
 @media (max-width: 767px) {
   .header__logo {
-    background-size: contain;
-    height: 26.55px;
-    width: 25.7px;
+    height: 30px;
+    width: 30px;
     border-radius: 0px;
     margin-left: 21px;
-    display: block;
   }
 }
 
-.header__logo_active {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+.header__logo:hover {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
 }
 
 .header__logo-hidden {
@@ -87,8 +93,49 @@
   display: flex;
 }
 
+@media (max-width: 1439px) {
+  .header__nav {
+    display: none;
+  }
+}
+
 @media (max-width: 767px) {
   .header__nav {
+    display: none;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: auto;
+    margin-top: 76px;
+    padding-right: 50px;
+    padding-bottom: 26px;
+  }
+}
+
+.header__nav-active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 40px;
+}
+
+@media (max-width: 1439px) {
+  .header__nav-active {
+    padding-left: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .header__nav-active {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: auto;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 0;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -111,13 +158,21 @@
 
 @media (max-width: 1439px) {
   .header__menu {
-    display: none;
+    padding-left: 40px;
   }
 }
 
 @media (max-width: 767px) {
   .header__menu {
-    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: auto;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 0;
     margin: 0;
     padding: 0;
   }
@@ -137,9 +192,6 @@
 
 @media (max-width: 767px) {
   .header__menu-item {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -151,7 +203,6 @@
 }
 
 .header__menu-ref {
-  font-family: Roboto;
   color: aliceblue;
   font-size: 16px;
   font-weight: 400;
@@ -164,31 +215,6 @@
   font-weight: bold;
 }
 
-.header__menu-active {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding-left: 40px;
-}
-
-@media (max-width: 767px) {
-  .header__menu-active {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    margin: auto;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    padding: 0;
-    /*margin-top: 76px;*/
-  }
-}
-
 .header__hamburger-button {
   display: none;
   background: #df2626;
@@ -198,7 +224,7 @@
 @media (max-width: 1439px) {
   .header__hamburger-button {
     display: block;
-    padding-right: 24px;
+    padding-right: 42px;
     border: none;
   }
 }

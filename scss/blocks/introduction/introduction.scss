@@ -2,65 +2,57 @@
 @import "./../../variables.scss";
 
 .introduction {
-  background-color: $clr-white;
+  margin: auto;
+  box-sizing: border-box;
   display: grid;
+  max-width: 1340px;
   grid-template-columns: 624px 642px;
   grid-template-rows: 220px 285px 50px;
   grid-column-gap: 70px;
-  max-width: 1340px;
-  margin: auto;
+  background-color: $clr-white;
   padding: 0;
   padding-top: 134px;
   padding-bottom: 50px;
-  
 
   @media (max-width: 1439px) {
     display: flex;
     flex-direction: column;
     max-width: 688px;
     padding-top: 114px;
+    padding-bottom: 41px;
   }
 
   @media (max-width: 767px) {
     padding: 0;
     padding-top: 84px;
-    display: flex;
-    flex-direction: column;
     max-width: 280px;
   }
 
   &__title {
-    grid-column: 1/2;
-    grid-row: 1/2;
     margin: 0;
     padding: 0;
-    font-family: Roboto;
-    font-size: 100px;
     font-weight: 400;
+    text-align: left;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    font-size: 100px;
     line-height: 110px;
     letter-spacing: 0em;
-    text-align: left;
     max-width: 624px;
 
     @media (max-width: 1439px) {
-      position: static;
       max-width: 624px;
     }
 
     @media (max-width: 767px) {
-      font-family: Roboto;
       font-size: 47px;
-      font-weight: 400;
       line-height: 56px;
-      letter-spacing: 0em;
-      text-align: left;
     }
   }
 
   &__description {
     grid-column: 1/2;
     grid-row: 2/3;
-    font-family: Roboto;
     font-size: 20px;
     font-weight: 400;
     line-height: 28px;
@@ -68,24 +60,19 @@
     text-align: left;
     max-width: 469px;
     padding: 0;
-    padding-left: 5px;
+    padding-left: 2px;
     margin-top: 65px;
 
     @media (max-width: 1439px) {
-      position: relative;
-      position: static;
       margin: 0;
       margin-top: 60px;
       padding: 0;
     }
 
     @media (max-width: 767px) {
-      position: relative;
-      position: static;
       margin: 0;
       margin-top: 60px;
       padding: 0;
-      font-family: Roboto;
       font-size: 14px;
       font-weight: 400;
       line-height: 18px;
@@ -97,59 +84,42 @@
   &__detail {
     grid-column: 1/2;
     grid-row: 3/4;
-    width: 228px;
-    height: 49px;
-    border: none;
-    background-image: url(./../images/detail.png);
+    @include button-l;
     background-color: $clr-white;
-    cursor: pointer;
 
     @media (max-width: 1439px) {
       position: relative;
-      position: static;
       margin: 0;
       margin-top: 60px;
       padding: 0;
     }
     @media (max-width: 767px) {
-      background-image: url(./../images/detailS.png);
-      width: 169px;
-      height: 40px;
+      @include button-s;
       margin-top: 30px;
       margin-bottom: 20px;
-      font-family: Roboto;
-      font-size: 14px;
-      font-weight: 400;
-      line-height: 28px;
-      letter-spacing: 0em;
-      text-align: center;
     }
+  }
+  &__detail:hover {
+    font-weight: 500;
   }
 
   &__picture-block {
     grid-column: 2/3;
     grid-row: 1/4;
-    display: flex;
     width: 642px;
     height: 555px;
-    background-image: url(./../images/introduction.png);
-    background-size: 100%;
 
     @media (max-width: 1439px) {
       margin: auto;
-      position: static;
       margin-top: 60px;
       width: 688px;
       height: 594px;
-      background-size: contain;
     }
 
     @media (max-width: 767px) {
-      position: static;
       margin-top: 60px;
       width: 280px;
       height: 242px;
-      background-size: contain;
     }
   }
 }

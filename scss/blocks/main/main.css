@@ -1,8 +1,18 @@
 .main {
-  /*box-sizing: border-box;
-  display: flex;
-  margin: auto;
-  flex-direction: column;
-  align-items: center;*/
+  width: 1440px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@media (max-width: 1439px) {
+  .main {
+    width: 768px;
+  }
+}
+
+@media (max-width: 767px) {
+  .main {
+    width: 320px;
+  }
 }
 /*# sourceMappingURL=main.css.map */

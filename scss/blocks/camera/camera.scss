@@ -2,72 +2,68 @@
 @import "./../../variables.scss";
 
 .camera {
+  box-sizing: border-box;
   background-color: $clr-black;
-  padding-top: 50px;
   max-width: 1440px;
+  display: grid;
+  grid-template-columns: 632px 642px;
+  grid-template-rows: 80px auto 50px auto;
+  grid-template-areas:
+    "navi pic"
+    "title pic"
+    "review pic"
+    "rev-block rev-block";
+  grid-column-gap: 62px;
   margin: auto;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 50px;
 
   @media (max-width: 1439px) {
     max-width: 768px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
 
   @media (max-width: 767px) {
-    max-width: 768px;
-    min-height: 300px;
-    padding-top: 0px;
-  }
-
-  &__wrapper {
-    width: 1340px;
-    position: relative;
-    min-height: 1357px;
-    margin: auto;
-    display: block;
-
-    @media (max-width: 1439px) {
-      display: flex;
-      flex-direction: column;
-      max-width: 688px;
-      min-height: 2159px;
-    }
-    @media (max-width: 767px) {
-      max-width: 280px;
-      min-height: 300px;
-    }
+    padding: 0;
+    margin: 0;
+    width: 320px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   &__nav-element {
-    font-family: Roboto;
+    @include navi-l;
+    grid-area: navi;
     color: $clr-white;
-    text-transform: uppercase;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 28px;
-    letter-spacing: 0em;
-    text-align: left;
     padding: 0;
     margin: 0;
     max-width: 280px;
-
+    padding-bottom: 50px;
+    @media (max-width: 1439px) {
+      padding-bottom: 40px;
+    }
 
     @media (max-width: 767px) {
-      font-family: Roboto;
       font-size: 14px;
-      font-weight: 400;
       line-height: 20px;
-      letter-spacing: 0em;
       width: 280px;
       border-top: 1px solid $clr-white;
       padding-top: 20px;
       margin-top: 40px;
+      padding-bottom: 32px;
     }
   }
 
   &__title {
+    grid-area: title;
     max-width: 618px;
-    margin-top: 50px;
+    margin: 0;
+    padding: 0;
     color: $clr-white;
-    font-family: Roboto;
     font-size: 122px;
     font-weight: 400;
     line-height: 122px;
@@ -76,25 +72,17 @@
 
     @media (max-width: 1439px) {
       max-width: 624px;
-      margin-top: 40px;
       margin-bottom: 0px;
     }
 
     @media (max-width: 767px) {
-      font-family: Roboto;
       font-size: 48px;
-      font-weight: 400;
       line-height: 56px;
-      letter-spacing: 0em;
-      text-align: left;
-      margin-top: 30px;
     }
   }
 
   &__review {
-    position: absolute;
-    top: 784px;
-    font-family: Roboto;
+    grid-area: review;
     font-size: 18px;
     text-transform: uppercase;
     font-weight: 400;
@@ -102,58 +90,49 @@
     letter-spacing: 0em;
     text-align: left;
     color: $clr-white;
+    padding-left: 3px;
 
     @media (max-width: 1439px) {
-      position: static;
       margin: 0;
       padding: 0;
       margin-top: 60px;
     }
     @media (max-width: 767px) {
-      position: static;
       margin-top: 60px;
-      font-family: Roboto;
       font-size: 14px;
       font-weight: 400;
       line-height: 20px;
-      letter-spacing: 0em;
-      text-align: left;
     }
   }
 
   &__picture-block {
-    position: absolute;
-    background-image: url(./../images/camera.png);
+    grid-area: pic;
     width: 642px;
     height: 832px;
-    top: 0px;
-    right: 0px;
+    padding: 0;
+    margin: 0;
 
     @media (max-width: 1439px) {
-      position: static;
       margin-top: 60px;
       width: 688px;
       height: 656px;
-      background-size: contain;
     }
 
     @media (max-width: 767px) {
-      margin-top: 60px;
       width: 280px;
       height: 268px;
-      background-size: contain;
     }
   }
 
   &__review-block {
-    position: absolute;
-    top: 1012px;
+    grid-area: rev-block;
     display: flex;
     margin: 0;
     padding: 0;
+    padding-top: 180px;
+    padding-bottom: 50px;
 
     @media (max-width: 1439px) {
-      position: static;
       flex-direction: column;
       margin: 0;
       margin-top: 180px;
@@ -161,8 +140,6 @@
     }
 
     @media (max-width: 767px) {
-      position: static;
-      flex-direction: column;
       margin: 0;
       margin-top: 60px;
       padding: 0;
@@ -174,6 +151,9 @@
     position: relative;
     display: flex;
     flex-direction: column;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
     &:last-of-type {
       padding-left: 0px;
       margin-left: 13px;
@@ -191,11 +171,11 @@
     }
 
     @media (max-width: 767px) {
-      padding-bottom: 20px;
+      padding-bottom: 30px;
       border-bottom: 1px solid $clr-white;
       &:last-of-type {
         border-bottom: none;
-        padding-bottom: 0;
+        padding-bottom: 20px;
         padding-top: 30px;
       }
     }
@@ -208,7 +188,6 @@
     margin-right: 172px;
     padding: 0;
     color: $clr-white;
-    font-family: Roboto;
     font-size: 43px;
     font-weight: 400;
     line-height: 43px;
@@ -216,12 +195,9 @@
     text-align: left;
 
     @media (max-width: 767px) {
-      font-family: Roboto;
       font-size: 24px;
       font-weight: 400;
       line-height: 26px;
-      letter-spacing: 0em;
-      text-align: left;
       margin: 0;
       padding: 0;
     }
@@ -233,7 +209,6 @@
 
   &__review-author {
     color: $clr-white;
-    font-family: Roboto;
     font-size: 17px;
     font-weight: 400;
     margin: 0;
@@ -242,12 +217,9 @@
     text-align: left;
     margin-top: 60px;
     @media (max-width: 767px) {
-      font-family: Roboto;
       font-size: 14px;
       font-weight: 400;
       line-height: 20px;
-      letter-spacing: 0em;
-      text-align: left;
       margin-top: 30px;
     }
   }
@@ -255,19 +227,15 @@
   &__review-email {
     margin-top: 20px;
     color: $clr-white;
-    font-family: Roboto;
     font-size: 15px;
     font-weight: 400;
     letter-spacing: 0em;
     text-align: left;
 
     @media (max-width: 767px) {
-      font-family: Roboto;
       font-size: 12px;
       font-weight: 400;
       line-height: 12px;
-      letter-spacing: 0em;
-      text-align: left;
       margin-top: 6px;
     }
   }

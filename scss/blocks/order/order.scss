@@ -3,11 +3,19 @@
 
 .order {
   background-color: $clr-white;
-  display: block;
-  position: relative;
-  max-width: 1340px;
+  max-width: 1440px;
+  display: grid;
+  grid-template-columns: 648px 642px;
+  grid-template-rows: 80px auto auto 50px;
+  grid-template-areas:
+    "navi navi"
+    "title title"
+    "pic description"
+    "pic detail";
+  grid-column-gap: 312px;
   margin: auto;
-  min-height: 645px;
+  padding-left: 50px;
+  padding-right: 50px;
   padding-top: 50px;
   padding-bottom: 50px;
 
@@ -16,48 +24,37 @@
     flex-direction: column;
     max-width: 688px;
     padding-top: 40px;
+    padding-bottom: 40px;
   }
 
   @media (max-width: 767px) {
-    display: flex;
-    flex-direction: column;
-    max-width: 280px;
-    min-height: auto;
-    padding-bottom: 20px;
+    box-sizing: border-box;
+    width: 320px;
+    padding: 0;
+    margin: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 40px;
   }
 
   &__nav-element {
-    font-family: Roboto;
+    @include navi-l;
+    grid-area: navi;
     color: $clr-black;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 28px;
-    letter-spacing: 0em;
-    text-align: left;
-    text-transform: uppercase;
     padding: 0;
+    padding-left: 3px;
+    padding-bottom: 50px;
     margin: 0;
     margin-top: 0px;
     max-width: 280px;
 
     @media (max-width: 1439px) {
-      font-family: Roboto;
       padding: 0;
       margin: 0;
-      font-size: 18px;
-      font-weight: 400;
-      line-height: 28px;
-      letter-spacing: 0em;
-      text-align: left;
     }
     @media (max-width: 767px) {
-      font-family: Roboto;
       font-size: 14px;
-      text-transform: uppercase;
-      font-weight: 400;
       line-height: 20px;
-      letter-spacing: 0em;
-      text-align: left;
       padding: 0;
       padding-top: 20px;
       border-top: 1px solid $clr-black;
@@ -66,38 +63,33 @@
   }
 
   &__title {
-    font-family: Roboto;
+    grid-area: title;
     font-size: 64px;
     font-weight: 400;
     line-height: 64px;
     letter-spacing: 0em;
     text-align: left;
     max-width: 549px;
-    margin-top: 50px;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 106px;
 
     @media (max-width: 1439px) {
       max-width: 624px;
-      position: static;
-      font-family: Roboto;
       font-size: 64px;
       font-weight: 400;
       line-height: 64px;
       letter-spacing: 0em;
-      text-align: left;
       padding: 0;
       margin: 0;
       margin-top: 40px;
     }
 
     @media (max-width: 767px) {
-      position: static;
-
-      font-family: Roboto;
       font-size: 32px;
       font-weight: 400;
       line-height: 38px;
       letter-spacing: 0em;
-      text-align: left;
       padding: 0;
       margin: 0;
       margin-top: 30px;
@@ -105,70 +97,43 @@
   }
 
   &__description {
-    position: absolute;
-    top: 366px;
-    right: 0px;
-    font-family: Roboto;
+    grid-area: description;
     font-size: 18px;
     font-weight: 400;
     line-height: 28px;
     letter-spacing: 0em;
     text-align: left;
-
     max-width: 380px;
 
     @media (max-width: 1439px) {
-      position: static;
       margin: 0;
       margin-top: 60px;
       padding: 0;
     }
 
     @media (max-width: 767px) {
-      position: static;
-      font-family: Roboto;
       font-size: 14px;
       font-weight: 400;
       line-height: 18px;
       letter-spacing: 0em;
-      text-align: left;
     }
   }
 
   &__detail {
-    width: 228px;
-    height: 49px;
-    border: none;
-    background-image: url(./../images/detail.png);
+    grid-area: detail;
+    @include button-l;
     background-color: $clr-white;
-    cursor: pointer;
-    position: absolute;
-    font-family: Roboto;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 28px;
-    letter-spacing: 0em;
-    text-align: center;
-
-    right: 152px;
-    bottom: 50px;
-
     @media (max-width: 1439px) {
-      position: static;
       margin: 0;
       margin-top: 60px;
       padding: 0;
     }
     @media (max-width: 767px) {
-      position: static;
-      background-image: url(./../images/detailS.png);
-      width: 169px;
-      height: 40px;
+      @include button-s;
       margin: 0;
       margin-top: 30px;
-
+      margin-bottom: 20px;
       padding: 0;
-      font-family: Roboto;
       font-size: 14px;
       font-weight: 400;
       line-height: 28px;
@@ -176,27 +141,24 @@
       text-align: center;
     }
   }
+  &__detail:hover {
+    font-weight: 500;
+  }
 
   &__picture-block {
-    position: absolute;
-    bottom: 50px;
-    background-image: url(./../images/order.png);
+    grid-area: pic;
     width: 648px;
     height: 333px;
     @media (max-width: 1439px) {
-      position: static;
       margin-top: 60px;
       width: 688px;
       height: 360px;
-      background-size: contain;
     }
 
     @media (max-width: 767px) {
-      position: static;
       margin-top: 60px;
       width: 280px;
       height: 147px;
-      background-size: contain;
     }
   }
 }

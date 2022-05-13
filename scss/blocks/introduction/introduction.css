@@ -1,14 +1,16 @@
 .introduction {
-  background-color: #FFFFFF;
+  margin: auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   display: -ms-grid;
   display: grid;
+  max-width: 1340px;
   -ms-grid-columns: 624px 642px;
       grid-template-columns: 624px 642px;
   -ms-grid-rows: 220px 285px 50px;
       grid-template-rows: 220px 285px 50px;
   grid-column-gap: 70px;
-  max-width: 1340px;
-  margin: auto;
+  background-color: #FFFFFF;
   padding: 0;
   padding-top: 134px;
   padding-bottom: 50px;
@@ -25,6 +27,7 @@
             flex-direction: column;
     max-width: 688px;
     padding-top: 114px;
+    padding-bottom: 41px;
   }
 }
 
@@ -32,50 +35,37 @@
   .introduction {
     padding: 0;
     padding-top: 84px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
     max-width: 280px;
   }
 }
 
 .introduction__title {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  text-align: left;
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-column: 1/2;
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   grid-row: 1/2;
-  margin: 0;
-  padding: 0;
-  font-family: Roboto;
   font-size: 100px;
-  font-weight: 400;
   line-height: 110px;
   letter-spacing: 0em;
-  text-align: left;
   max-width: 624px;
 }
 
 @media (max-width: 1439px) {
   .introduction__title {
-    position: static;
     max-width: 624px;
   }
 }
 
 @media (max-width: 767px) {
   .introduction__title {
-    font-family: Roboto;
     font-size: 47px;
-    font-weight: 400;
     line-height: 56px;
-    letter-spacing: 0em;
-    text-align: left;
   }
 }
 
@@ -86,7 +76,6 @@
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
   grid-row: 2/3;
-  font-family: Roboto;
   font-size: 20px;
   font-weight: 400;
   line-height: 28px;
@@ -94,14 +83,12 @@
   text-align: left;
   max-width: 469px;
   padding: 0;
-  padding-left: 5px;
+  padding-left: 2px;
   margin-top: 65px;
 }
 
 @media (max-width: 1439px) {
   .introduction__description {
-    position: relative;
-    position: static;
     margin: 0;
     margin-top: 60px;
     padding: 0;
@@ -110,12 +97,9 @@
 
 @media (max-width: 767px) {
   .introduction__description {
-    position: relative;
-    position: static;
     margin: 0;
     margin-top: 60px;
     padding: 0;
-    font-family: Roboto;
     font-size: 14px;
     font-weight: 400;
     line-height: 18px;
@@ -133,16 +117,19 @@
   grid-row: 3/4;
   width: 228px;
   height: 49px;
+  font-weight: 400;
+  font-size: 18px;
   border: none;
-  background-image: url(./../images/detail.png);
-  background-color: #FFFFFF;
+  background-image: url(./../images/detail.svg);
   cursor: pointer;
+  -webkit-transition: font-weight ease .3s;
+  transition: font-weight ease .3s;
+  background-color: #FFFFFF;
 }
 
 @media (max-width: 1439px) {
   .introduction__detail {
     position: relative;
-    position: static;
     margin: 0;
     margin-top: 60px;
     padding: 0;
@@ -151,18 +138,24 @@
 
 @media (max-width: 767px) {
   .introduction__detail {
-    background-image: url(./../images/detailS.png);
+    background-image: url(./../images/detailS.svg);
     width: 169px;
     height: 40px;
-    margin-top: 30px;
-    margin-bottom: 20px;
-    font-family: Roboto;
     font-size: 14px;
     font-weight: 400;
     line-height: 28px;
     letter-spacing: 0em;
     text-align: center;
+    cursor: pointer;
+    -webkit-transition: font-weight ease .3s;
+    transition: font-weight ease .3s;
+    margin-top: 30px;
+    margin-bottom: 20px;
   }
+}
+
+.introduction__detail:hover {
+  font-weight: 500;
 }
 
 .introduction__picture-block {
@@ -172,33 +165,24 @@
   -ms-grid-row: 1;
   -ms-grid-row-span: 3;
   grid-row: 1/4;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   width: 642px;
   height: 555px;
-  background-image: url(./../images/introduction.png);
-  background-size: 100%;
 }
 
 @media (max-width: 1439px) {
   .introduction__picture-block {
     margin: auto;
-    position: static;
     margin-top: 60px;
     width: 688px;
     height: 594px;
-    background-size: contain;
   }
 }
 
 @media (max-width: 767px) {
   .introduction__picture-block {
-    position: static;
     margin-top: 60px;
     width: 280px;
     height: 242px;
-    background-size: contain;
   }
 }
 /*# sourceMappingURL=introduction.css.map */

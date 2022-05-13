@@ -1,34 +1,25 @@
 .camera {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   background-color: #000000;
-  padding-top: 50px;
   max-width: 1440px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 632px 642px;
+      grid-template-columns: 632px 642px;
+  -ms-grid-rows: 80px auto 50px auto;
+      grid-template-rows: 80px auto 50px auto;
+      grid-template-areas: "navi pic" "title pic" "review pic" "rev-block rev-block";
+  grid-column-gap: 62px;
   margin: auto;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 50px;
 }
 
 @media (max-width: 1439px) {
   .camera {
     max-width: 768px;
-  }
-}
-
-@media (max-width: 767px) {
-  .camera {
-    max-width: 768px;
-    min-height: 300px;
-    padding-top: 0px;
-  }
-}
-
-.camera__wrapper {
-  width: 1340px;
-  position: relative;
-  min-height: 1357px;
-  margin: auto;
-  display: block;
-}
-
-@media (max-width: 1439px) {
-  .camera__wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -36,51 +27,64 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    max-width: 688px;
-    min-height: 2159px;
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
 }
 
 @media (max-width: 767px) {
-  .camera__wrapper {
-    max-width: 280px;
-    min-height: 300px;
+  .camera {
+    padding: 0;
+    margin: 0;
+    width: 320px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 
 .camera__nav-element {
-  font-family: Roboto;
-  color: #FFFFFF;
-  text-transform: uppercase;
   font-size: 18px;
   font-weight: 400;
   line-height: 28px;
   letter-spacing: 0em;
   text-align: left;
+  text-transform: uppercase;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: navi;
+  color: #FFFFFF;
   padding: 0;
   margin: 0;
   max-width: 280px;
+  padding-bottom: 50px;
+}
+
+@media (max-width: 1439px) {
+  .camera__nav-element {
+    padding-bottom: 40px;
+  }
 }
 
 @media (max-width: 767px) {
   .camera__nav-element {
-    font-family: Roboto;
     font-size: 14px;
-    font-weight: 400;
     line-height: 20px;
-    letter-spacing: 0em;
     width: 280px;
     border-top: 1px solid #FFFFFF;
     padding-top: 20px;
     margin-top: 40px;
+    padding-bottom: 32px;
   }
 }
 
 .camera__title {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: title;
   max-width: 618px;
-  margin-top: 50px;
+  margin: 0;
+  padding: 0;
   color: #FFFFFF;
-  font-family: Roboto;
   font-size: 122px;
   font-weight: 400;
   line-height: 122px;
@@ -91,27 +95,21 @@
 @media (max-width: 1439px) {
   .camera__title {
     max-width: 624px;
-    margin-top: 40px;
     margin-bottom: 0px;
   }
 }
 
 @media (max-width: 767px) {
   .camera__title {
-    font-family: Roboto;
     font-size: 48px;
-    font-weight: 400;
     line-height: 56px;
-    letter-spacing: 0em;
-    text-align: left;
-    margin-top: 30px;
   }
 }
 
 .camera__review {
-  position: absolute;
-  top: 784px;
-  font-family: Roboto;
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: review;
   font-size: 18px;
   text-transform: uppercase;
   font-weight: 400;
@@ -119,11 +117,11 @@
   letter-spacing: 0em;
   text-align: left;
   color: #FFFFFF;
+  padding-left: 3px;
 }
 
 @media (max-width: 1439px) {
   .camera__review {
-    position: static;
     margin: 0;
     padding: 0;
     margin-top: 60px;
@@ -132,58 +130,55 @@
 
 @media (max-width: 767px) {
   .camera__review {
-    position: static;
     margin-top: 60px;
-    font-family: Roboto;
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
-    letter-spacing: 0em;
-    text-align: left;
   }
 }
 
 .camera__picture-block {
-  position: absolute;
-  background-image: url(./../images/camera.png);
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 2;
+  grid-area: pic;
   width: 642px;
   height: 832px;
-  top: 0px;
-  right: 0px;
+  padding: 0;
+  margin: 0;
 }
 
 @media (max-width: 1439px) {
   .camera__picture-block {
-    position: static;
     margin-top: 60px;
     width: 688px;
     height: 656px;
-    background-size: contain;
   }
 }
 
 @media (max-width: 767px) {
   .camera__picture-block {
-    margin-top: 60px;
     width: 280px;
     height: 268px;
-    background-size: contain;
   }
 }
 
 .camera__review-block {
-  position: absolute;
-  top: 1012px;
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: rev-block;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin: 0;
   padding: 0;
+  padding-top: 180px;
+  padding-bottom: 50px;
 }
 
 @media (max-width: 1439px) {
   .camera__review-block {
-    position: static;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -196,11 +191,6 @@
 
 @media (max-width: 767px) {
   .camera__review-block {
-    position: static;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
     margin: 0;
     margin-top: 60px;
     padding: 0;
@@ -217,6 +207,9 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
 }
 
 .camera__review-element:last-of-type {
@@ -239,12 +232,12 @@
 
 @media (max-width: 767px) {
   .camera__review-element {
-    padding-bottom: 20px;
+    padding-bottom: 30px;
     border-bottom: 1px solid #FFFFFF;
   }
   .camera__review-element:last-of-type {
     border-bottom: none;
-    padding-bottom: 0;
+    padding-bottom: 20px;
     padding-top: 30px;
   }
 }
@@ -256,7 +249,6 @@
   margin-right: 172px;
   padding: 0;
   color: #FFFFFF;
-  font-family: Roboto;
   font-size: 43px;
   font-weight: 400;
   line-height: 43px;
@@ -266,12 +258,9 @@
 
 @media (max-width: 767px) {
   .camera__paragraph {
-    font-family: Roboto;
     font-size: 24px;
     font-weight: 400;
     line-height: 26px;
-    letter-spacing: 0em;
-    text-align: left;
     margin: 0;
     padding: 0;
   }
@@ -284,7 +273,6 @@
 
 .camera__review-author {
   color: #FFFFFF;
-  font-family: Roboto;
   font-size: 17px;
   font-weight: 400;
   margin: 0;
@@ -296,12 +284,9 @@
 
 @media (max-width: 767px) {
   .camera__review-author {
-    font-family: Roboto;
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
-    letter-spacing: 0em;
-    text-align: left;
     margin-top: 30px;
   }
 }
@@ -309,7 +294,6 @@
 .camera__review-email {
   margin-top: 20px;
   color: #FFFFFF;
-  font-family: Roboto;
   font-size: 15px;
   font-weight: 400;
   letter-spacing: 0em;
@@ -318,12 +302,9 @@
 
 @media (max-width: 767px) {
   .camera__review-email {
-    font-family: Roboto;
     font-size: 12px;
     font-weight: 400;
     line-height: 12px;
-    letter-spacing: 0em;
-    text-align: left;
     margin-top: 6px;
   }
 }

@@ -14,4 +14,10 @@
       -ms-flex-align: center;
           align-items: center;
 }
+
+@media (max-width: 767px) {
+  .page {
+    max-width: 320px;
+  }
+}
 /*# sourceMappingURL=page.css.map */

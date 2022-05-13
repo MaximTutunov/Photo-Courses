@@ -1,5 +1,5 @@
-@import './../../mixins.scss';
-@import './../../variables.scss';
+@import "./../../mixins.scss";
+@import "./../../variables.scss";
 
 .page {
   background-color: $clr-white;
@@ -9,5 +9,7 @@
   max-width: 1440px;
   min-width: 320px;
   align-items: center;
- 
+  @media (max-width: 767px) {
+    max-width: 320px;
   }
+}
