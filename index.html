@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./scss/index.css" />
+    <title>Курс по фотографии</title>
+    <meta name="description" content="курс по фотографии" />
+    <meta name="keywords" content="курсы, фотография" />
+    <meta name="author" content="Тютюнов Максим" />
+  </head>
+
+  <body class="page root">
+    <header class="header">
+      <a class="header__logo" href="#"></a>
+      <nav class="header__nav">
+        <ul class="header__menu">
+          <li class="header__menu-item">
+            <a href="#comp" class="header__menu-ref"> Композиция</a>
+          </li>
+          <li class="header__menu-item">
+            <a href="#cam" class="header__menu-ref"> Камера</a>
+          </li>
+          <li class="header__menu-item">
+            <a href="#order" class="header__menu-ref"> Поиск заказов</a>
+          </li>
+        </ul>
+      </nav>
+
+      <button class="header__hamburger-button" type="button">
+        <img
+          class="header__menuIcon"
+          src="./images/burger-icon.svg"
+          alt="иконка меню-бургера"
+        />
+        <img
+          class="header__closeIcon header__closeIcon-hidden"
+          src="./images/close-icon.svg"
+          alt="иконка закрыть"
+        />
+      </button>
+    </header>
+
+    <main class="main">
+      <section class="introduction">
+        <h1 class="introduction__title">Курс&nbsp;по фотографии</h1>
+
+        <img
+          class="introduction__picture-block"
+          src="./images/introduction.png"
+          alt="лес зимой"
+        />
+        <p class="introduction__description">
+          Фотография в природных условиях, уроки по композиции и по пользованию
+          камерой.
+        </p>
+        <button type="button" class="introduction__detail">Подробнее</button>
+      </section>
+
+      <section class="composition" id="comp">
+        <p class="composition__nav-element">композиция</p>
+        <h2 class="composition__title">Изучите композицию</h2>
+        <img
+          class="composition__picture-block"
+          src="./images/composition.png"
+          alt="лесная дорога"
+        />
+        <div class="composition__description">
+          <p class="composition__paragraph">
+            Вы изучите гармоничное размещение всех элементов изображения на
+            снимке.
+          </p>
+          <p class="composition__paragraph">
+            Изучите композицию интуитивную и какие-то определённые законы.
+          </p>
+        </div>
+
+        <button type="button" class="composition__detail">Записаться!</button>
+
+        <ul class="composition__rules-block">
+          <li class="composition__rules">
+            Правило третей, при котором нужно располагать объекты на
+            пересечениях.
+          </li>
+          <li class="composition__rules">
+            Простота: убирай всё лишнее и кадрируй!
+          </li>
+          <li class="composition__rules">
+            Равновесие: уравновесь пятна объекта и фона.
+          </li>
+          <li class="composition__rules">
+            3D глубина кадра: расположи объект позади и перед другими
+            предметами.
+          </li>
+        </ul>
+      </section>
+
+      <section class="camera" id="cam">
+        <p class="camera__nav-element">камера</p>
+        <h2 class="camera__title">Настройка Съемка Обработка</h2>
+        <img
+          class="camera__picture-block"
+          src="./images/camera.png"
+          alt="лес"
+        />
+        <p class="camera__review">отзывы про часть о камерах:</p>
+
+        <div class="camera__review-block">
+          <ul class="camera__review-element">
+            <li class="camera__paragraph">
+              на&NonBreakingSpace;этом&NonBreakingSpace;курсе&NonBreakingSpace;я&NonBreakingSpace;научился
+              пользоватся камерой, как настоящий профессионал!
+            </li>
+            <li class="camera__review-author">Питер, водитель</li>
+            <li class="camera__review-email">@piter123</li>
+          </ul>
+          <ul class="camera__review-element">
+            <li class="camera__paragraph">
+              супер крутой курс! на части про фотики я стал разбираться в
+              предназначении&NonBreakingSpace;кнопок
+            </li>
+            <li class="camera__review-author">Джон, спортсмен</li>
+            <li class="camera__review-email">@john_sport</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="order" id="order">
+        <p class="order__nav-element">поиск заказов</p>
+        <h2 class="order__title">Научим находить заказы!</h2>
+        <img
+          class="order__picture-block"
+          src="./images/order.png"
+          alt="высокое дерево"
+        />
+        <p class="order__description">
+          Мы научим вас искать заказы на всяких фриланс биржах, а когда вы
+          сделаете крутое портфолио, мы поможем найти постоянную работу.
+        </p>
+        <button type="button" class="order__detail">Записаться!</button>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__icon"></div>
+      <h2 class="footer__title">Записаться! Сейчас!</h2>
+
+      <form class="footer__emailform" name="email">
+        <input
+          class="footer__input"
+          type="email"
+          name="email"
+          id="emailinput"
+          placeholder="Ваша почта"
+          required
+        />
+        <button class="footer__button" type="submit">Записаться!</button>
+      </form>
+
+      <p class="footer__sitename">© Максим Тютюнов 2022</p>
+    </footer>
+
+    <script src="./scripts/script.js"></script>
+  </body>
+</html>

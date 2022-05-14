@@ -1,0 +1,242 @@
+@import "./../../mixins.scss";
+@import "./../../variables.scss";
+
+.camera {
+  box-sizing: border-box;
+  background-color: $clr-black;
+  max-width: 1440px;
+  display: grid;
+  grid-template-columns: 632px 642px;
+  grid-template-rows: 80px auto 50px auto;
+  grid-template-areas:
+    "navi pic"
+    "title pic"
+    "review pic"
+    "rev-block rev-block";
+  grid-column-gap: 62px;
+  margin: auto;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 50px;
+
+  @media (max-width: 1439px) {
+    max-width: 768px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  @media (max-width: 767px) {
+    padding: 0;
+    margin: 0;
+    width: 320px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  &__nav-element {
+    @include navi-l;
+    grid-area: navi;
+    color: $clr-white;
+    padding: 0;
+    margin: 0;
+    max-width: 280px;
+    padding-bottom: 50px;
+    @media (max-width: 1439px) {
+      padding-bottom: 40px;
+    }
+
+    @media (max-width: 767px) {
+      font-size: 14px;
+      line-height: 20px;
+      width: 280px;
+      border-top: 1px solid $clr-white;
+      padding-top: 20px;
+      margin-top: 40px;
+      padding-bottom: 32px;
+    }
+  }
+
+  &__title {
+    grid-area: title;
+    max-width: 618px;
+    margin: 0;
+    padding: 0;
+    color: $clr-white;
+    font-size: 122px;
+    font-weight: 400;
+    line-height: 122px;
+    letter-spacing: 0em;
+    text-align: left;
+
+    @media (max-width: 1439px) {
+      max-width: 624px;
+      margin-bottom: 0px;
+    }
+
+    @media (max-width: 767px) {
+      font-size: 48px;
+      line-height: 56px;
+    }
+  }
+
+  &__review {
+    grid-area: review;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: $clr-white;
+    padding-left: 3px;
+
+    @media (max-width: 1439px) {
+      margin: 0;
+      padding: 0;
+      margin-top: 60px;
+    }
+    @media (max-width: 767px) {
+      margin-top: 60px;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px;
+    }
+  }
+
+  &__picture-block {
+    grid-area: pic;
+    width: 642px;
+    height: 832px;
+    padding: 0;
+    margin: 0;
+
+    @media (max-width: 1439px) {
+      margin-top: 60px;
+      width: 688px;
+      height: 656px;
+    }
+
+    @media (max-width: 767px) {
+      width: 280px;
+      height: 268px;
+    }
+  }
+
+  &__review-block {
+    grid-area: rev-block;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    padding-top: 180px;
+    padding-bottom: 50px;
+
+    @media (max-width: 1439px) {
+      flex-direction: column;
+      margin: 0;
+      margin-top: 180px;
+      padding: 0;
+    }
+
+    @media (max-width: 767px) {
+      margin: 0;
+      margin-top: 60px;
+      padding: 0;
+    }
+  }
+
+  &__review-element {
+    color: $clr-white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    &:last-of-type {
+      padding-left: 0px;
+      margin-left: 13px;
+    }
+
+    @media (max-width: 1439px) {
+      padding-bottom: 60px;
+      border-bottom: 1px solid $clr-white;
+      &:last-of-type {
+        border-bottom: none;
+        padding-bottom: 0;
+        padding-top: 60px;
+        margin: 0;
+      }
+    }
+
+    @media (max-width: 767px) {
+      padding-bottom: 30px;
+      border-bottom: 1px solid $clr-white;
+      &:last-of-type {
+        border-bottom: none;
+        padding-bottom: 20px;
+        padding-top: 30px;
+      }
+    }
+  }
+
+  &__paragraph {
+    max-width: 560px;
+    max-height: 173px;
+    margin: 0;
+    margin-right: 172px;
+    padding: 0;
+    color: $clr-white;
+    font-size: 43px;
+    font-weight: 400;
+    line-height: 43px;
+    letter-spacing: 0em;
+    text-align: left;
+
+    @media (max-width: 767px) {
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 26px;
+      margin: 0;
+      padding: 0;
+    }
+  }
+  &paragraph:last-child {
+    margin-right: 0px;
+    border-bottom: none;
+  }
+
+  &__review-author {
+    color: $clr-white;
+    font-size: 17px;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-top: 60px;
+    @media (max-width: 767px) {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px;
+      margin-top: 30px;
+    }
+  }
+
+  &__review-email {
+    margin-top: 20px;
+    color: $clr-white;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 0em;
+    text-align: left;
+
+    @media (max-width: 767px) {
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 12px;
+      margin-top: 6px;
+    }
+  }
+}

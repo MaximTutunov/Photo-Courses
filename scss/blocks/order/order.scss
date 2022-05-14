@@ -1,0 +1,164 @@
+@import "./../../mixins.scss";
+@import "./../../variables.scss";
+
+.order {
+  background-color: $clr-white;
+  max-width: 1440px;
+  display: grid;
+  grid-template-columns: 648px 642px;
+  grid-template-rows: 80px auto auto 50px;
+  grid-template-areas:
+    "navi navi"
+    "title title"
+    "pic description"
+    "pic detail";
+  grid-column-gap: 312px;
+  margin: auto;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  @media (max-width: 1439px) {
+    display: flex;
+    flex-direction: column;
+    max-width: 688px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  @media (max-width: 767px) {
+    box-sizing: border-box;
+    width: 320px;
+    padding: 0;
+    margin: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 40px;
+  }
+
+  &__nav-element {
+    @include navi-l;
+    grid-area: navi;
+    color: $clr-black;
+    padding: 0;
+    padding-left: 3px;
+    padding-bottom: 50px;
+    margin: 0;
+    margin-top: 0px;
+    max-width: 280px;
+
+    @media (max-width: 1439px) {
+      padding: 0;
+      margin: 0;
+    }
+    @media (max-width: 767px) {
+      font-size: 14px;
+      line-height: 20px;
+      padding: 0;
+      padding-top: 20px;
+      border-top: 1px solid $clr-black;
+      margin: 0;
+    }
+  }
+
+  &__title {
+    grid-area: title;
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 64px;
+    letter-spacing: 0em;
+    text-align: left;
+    max-width: 549px;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 106px;
+
+    @media (max-width: 1439px) {
+      max-width: 624px;
+      font-size: 64px;
+      font-weight: 400;
+      line-height: 64px;
+      letter-spacing: 0em;
+      padding: 0;
+      margin: 0;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 767px) {
+      font-size: 32px;
+      font-weight: 400;
+      line-height: 38px;
+      letter-spacing: 0em;
+      padding: 0;
+      margin: 0;
+      margin-top: 30px;
+    }
+  }
+
+  &__description {
+    grid-area: description;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+    max-width: 380px;
+
+    @media (max-width: 1439px) {
+      margin: 0;
+      margin-top: 60px;
+      padding: 0;
+    }
+
+    @media (max-width: 767px) {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 18px;
+      letter-spacing: 0em;
+    }
+  }
+
+  &__detail {
+    grid-area: detail;
+    @include button-l;
+    background-color: $clr-white;
+    @media (max-width: 1439px) {
+      margin: 0;
+      margin-top: 60px;
+      padding: 0;
+    }
+    @media (max-width: 767px) {
+      @include button-s;
+      margin: 0;
+      margin-top: 30px;
+      margin-bottom: 20px;
+      padding: 0;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 28px;
+      letter-spacing: 0em;
+      text-align: center;
+    }
+  }
+  &__detail:hover {
+    font-weight: 500;
+  }
+
+  &__picture-block {
+    grid-area: pic;
+    width: 648px;
+    height: 333px;
+    @media (max-width: 1439px) {
+      margin-top: 60px;
+      width: 688px;
+      height: 360px;
+    }
+
+    @media (max-width: 767px) {
+      margin-top: 60px;
+      width: 280px;
+      height: 147px;
+    }
+  }
+}

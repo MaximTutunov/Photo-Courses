@@ -1,0 +1,225 @@
+@import "./../../mixins.scss";
+@import "./../../variables.scss";
+
+.composition {
+  box-sizing: border-box;
+  background-color: $clr-yellow;
+  width: 1440px;
+  display: grid;
+  grid-template-columns: 632px 642px;
+  grid-template-rows: 80px 128px auto 50px auto;
+  grid-template-areas:
+    "navi pic"
+    "title pic"
+    "description pic"
+    "detail pic"
+    "rules rules";
+  grid-column-gap: 64px;
+  margin: auto;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 50px;
+
+  @media (max-width: 1439px) {
+    width: 768px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+    padding-bottom: 20px;
+  }
+
+  @media (max-width: 767px) {
+    width: 320px;
+    padding: 0;
+    margin: 0;
+    padding-left: 20px;
+  }
+
+  &__nav-element {
+    grid-area: navi;
+    @include navi-l;
+    padding: 0;
+    padding-bottom: 50px;
+    padding-left: 3px;
+    margin: 0;
+    @media (max-width: 1439px) {
+      padding-bottom: 40px;
+    }
+    @media (max-width: 767px) {
+      border-top: 1px solid black;
+      width: 280px;
+      margin: 0;
+      padding: 0;
+      margin-top: 40px;
+      padding-top: 20px;
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+
+  &__title {
+    grid-area: title;
+    max-width: 403px;
+    padding: 0;
+    margin: 0;
+    font-size: 64px;
+    line-height: 64px;
+    font-weight: 400;
+    letter-spacing: 0em;
+    text-align: left;
+    @media (max-width: 1439px) {
+      margin-bottom: 55px;
+    }
+    @media (max-width: 767px) {
+      padding: 0;
+      margin: 0;
+      max-width: 280px;
+      margin-top: 30px;
+      font-size: 30px;
+      font-weight: 400;
+      line-height: 38px;
+    }
+  }
+
+  &__description {
+    grid-area: description;
+    max-width: 400px;
+    margin: 0;
+    padding-top: 100px;
+    padding-left: 3px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+
+    @media (max-width: 1439px) {
+      margin: 0;
+      margin-top: 60px;
+      padding: 0;
+    }
+
+    @media (max-width: 767px) {
+      max-width: 280px;
+      margin: 0;
+      margin-top: 60px;
+      padding: 0;
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+
+  &__paragraph {
+    margin: 0;
+    padding: 0;
+
+    @media (max-width: 767px) {
+      margin-bottom: 36px;
+      margin-top: 0px;
+    }
+  }
+
+  &__paragraph:last-of-type {
+    margin-top: 20px;
+  }
+
+  &__detail {
+    grid-area: detail;
+    @include button-l;
+    background-color: transparent;
+
+    @media (max-width: 1439px) {
+      background-color: transparent;
+      margin-top: 60px;
+    }
+    @media (max-width: 767px) {
+      @include button-s;
+      margin: 0;
+      margin-top: -5px;
+      padding: 0;
+    }
+  }
+  &__detail:hover {
+    font-weight: 500;
+  }
+
+  &__picture-block {
+    grid-area: pic;
+    width: 642px;
+    height: 685px;
+    @media (max-width: 1439px) {
+      margin-top: 10px;
+      width: 688px;
+      height: 685px;
+    }
+
+    @media (max-width: 767px) {
+      margin-top: 60px;
+      width: 280px;
+      height: 278px;
+    }
+  }
+
+  &__rules-block {
+    grid-area: rules;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    padding-top: 97px;
+    padding-bottom: 30px;
+
+    @media (max-width: 1439px) {
+      display: flex;
+      flex-direction: column;
+      margin-top: 45px;
+      padding: 0;
+    }
+
+    @media (max-width: 767px) {
+      flex-direction: column;
+      margin-top: 64px;
+      width: 278px;
+    }
+  }
+
+  &__rules {
+    max-width: 291px;
+    margin-right: 56px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+    padding-left: 3px;
+
+    @media (max-width: 1439px) {
+      margin: 0;
+      max-width: 688px;
+      padding: 0;
+      margin-top: 0px;
+      border-bottom: 1px solid black;
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+    @media (max-width: 767px) {
+      max-width: 270px;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 18px;
+      padding: 0;
+      padding-top: 14px;
+      margin-top: 0;
+      padding-bottom: 14px;
+      border-bottom: 1px solid $clr-black;
+      margin-top: 0px;
+    }
+  }
+
+  &__rules:last-of-type {
+    margin-right: 0px;
+    border-bottom: none;
+    padding-bottom: 18px;
+  }
+}

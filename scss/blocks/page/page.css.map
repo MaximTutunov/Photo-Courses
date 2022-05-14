@@ -1,0 +1,11 @@
+{
+    "version": 3,
+    "mappings": "AAGA,AAAA,KAAK,CAAC;EACJ,gBAAgB,EEHN,OAAO;EFIjB,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM;EACtB,MAAM,EAAE,MAAM;EACd,SAAS,EAAE,MAAM;EACjB,SAAS,EAAE,KAAK;EAChB,WAAW,EAAE,MAAM;CAIpB;;AAHC,MAAM,EAAE,SAAS,EAAE,KAAK;EAR1B,AAAA,KAAK,CAAC;IASF,SAAS,EAAE,KAAK;GAEnB",
+    "sources": [
+        "page.scss",
+        "../../mixins.scss",
+        "../../variables.scss"
+    ],
+    "names": [],
+    "file": "page.css"
+}
