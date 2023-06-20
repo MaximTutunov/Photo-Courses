@@ -14,6 +14,9 @@
 * JavaScript
 * Sass
 
-https://github.com/MaximTutunov/Photo-Courses
+Запуск проекта:
 
+index.html Live Server VSCode
 
+Ссылка на проект:
+https://glib-behavior.surge.sh/
